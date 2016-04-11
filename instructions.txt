@@ -1,0 +1,30 @@
+Ownlocalbusiness
+
+The app runs on ruby version 2.1.5, change it to the version you use on the gemfile or rvm to ruby -v 2.1.5
+
+Run `bundle install` to get the correct packages
+
+Install Pow (allows us to work with subdomains easily ONLY for OS X):
+- curl get.pow.cx | sh
+- cd ~/.pow
+- ln ~/Developer/ownlocalbusiness (I kept my "ownlocal" app in ~/Developer, do this to create symlink)
+
+To load data, a view was made for you to do so at the following link:
+- First `rails s` to start server 
+- localhost:3000/businesses (this is the businesses#index view that will allow you to upload a CSV file and only CSV file)
+- The import will create the rows in your mysql database (which I have configured for you, check database.yml; I'm using mysql)
+- 50,000 rows will take about 5 minutes to do all the 'creates' in the DB, just so we have some data to work with.
+
+
+Navgiate to the following link:
+- GET /businesses  --> api.ownlocalbusiness.dev/business 
+- GET /businesses  with parameters  --> api.ownlocalbusiness.dev/businesses?per_page=60&page=10 
+- GET /businesses/:id  --> api.ownlocalbusiness.dev/businesses/1 will return the json data for the business with ID = 1
+
+You can install the chrome extension POSTMAN to test the API Endpoints
+
+TESTING: 
+- Run `bundle/exec rspec` to run the tests located in the `spec` folder.
+- A coverage report will be generated open `coverage/index.html` 
+
+

@@ -11,7 +11,7 @@ describe Api::V1::BusinessesController do
 
     it "returns the businesses information in json" do
       business_response = JSON.parse(response.body, symbolize_names: true)
-      expect(business_response[:business][:uuid]).to eql '2859d6e0-1cb9-4fe9-bc00-97823a9fa4cb'
+      expect(business_response[:uuid]).to eql '2859d6e0-1cb9-4fe9-bc00-97823a9fa4cb'
     end
 
     it { expect(response.status).to eql 200 }

@@ -20,7 +20,9 @@ class Api::V1::BusinessesController < ApplicationController
 	end
 
 	def show
-		respond_with :api, :v1, Business.find(params[:id]), status: 200
+		business = Business.find(params[:id])
+		
+		respond_with :api, :v1, business.to_json, status: 200
 	end
 end
 
