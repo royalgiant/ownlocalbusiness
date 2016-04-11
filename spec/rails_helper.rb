@@ -1,5 +1,7 @@
 require 'spec_helper'
 require 'rspec/rails'
+require 'simplecov'
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     # Choose a test framework:
