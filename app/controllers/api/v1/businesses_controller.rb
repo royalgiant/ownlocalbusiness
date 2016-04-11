@@ -7,7 +7,7 @@ class Api::V1::BusinessesController < ApplicationController
 	def index
 		# businesses = Business.order(id: :asc).paginate(:page => params[:page], :per_page => 10)
 		@businesses = Business.order(id: :asc)
-		respond_with :api, :v1, @businesses
+		respond_with :api, :v1, @businessess
 	end
 
 	def show
