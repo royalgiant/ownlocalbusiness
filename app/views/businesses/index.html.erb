@@ -1,0 +1,13 @@
+<div>
+	<h1> Import CSV file </h1>
+
+	<%= form_tag import_businesses_path, :class=>"import", multipart: true do %>
+	  <div><%= file_field_tag :file %></div> <br>
+	  <div><%= submit_tag "Import" %></div>
+	  <p>
+	  	<i>* Large files may take longer to load, please be patient after submitting. Success will be indicated by a page refresh.
+	  <br/> * File must be in .csv format.</i>
+	  </p>
+	<% end %>
+
+</div>
