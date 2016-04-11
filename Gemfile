@@ -33,7 +33,7 @@ gem 'mysql2', '~> 0.3.20'
 gem 'smarter_csv', '~> 1.1'
 
 #Api gems
-gem 'active_model_serializers', git: 'git@github.com:rails-api/active_model_serializers.git', branch: '0-8-stable'
+gem 'active_model_serializers'
 gem 'responders'
 
 
